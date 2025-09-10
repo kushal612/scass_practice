@@ -1,10 +1,10 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 nav {
-  background-color: bisque;
   display: flex;
   justify-content: space-between;
 }
@@ -39,13 +39,11 @@ nav ul li {
   width: 25%;
   height: 50px;
   border-style: none;
-  border-radius: 10px;
 }
 .search-div button {
   border-style: none;
-  border-radius: 10px;
+  font-size: larger;
   background-color: greenyellow;
-  margin-left: 2px;
   width: 70px;
   height: 50px;
 }
@@ -94,7 +92,7 @@ nav ul li {
   display: grid;
   grid-template-areas: "header header header header " "menu left center right " "menu middle middle middle " "menu lower lower lower " "footer footer footer footer ";
   grid-gap: 10px;
-  padding: 10px;
+  padding: 25px;
 }
 
 .grid-container > div {
@@ -109,14 +107,14 @@ nav ul li {
 .buttom .previous-btn {
   background-color: greenyellow;
   border-style: none;
-  margin-left: 5px;
+  margin-left: 20px;
   border-radius: 5px;
 }
 .buttom .next-btn {
   background-color: greenyellow;
   border-style: none;
   width: 50px;
-  margin-right: 5px;
+  margin-right: 20px;
   border-radius: 5px;
 }
 .buttom .num-btn {
@@ -124,9 +122,10 @@ nav ul li {
 }
 
 .footer {
+  margin-top: 5px;
   display: flex;
-  background-color: #2c3e50;
-  color: #f4f4f4;
+  background-color: rgb(187, 187, 187);
+  color: rgb(6, 193, 180);
   justify-content: center;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -141,20 +140,21 @@ nav ul li {
 }
 .footer__section {
   padding: 20px;
-  min-width: 200px;
+  width: 200px;
   margin: 10px;
 }
 .footer__text {
   flex: 2;
-  min-width: 250px;
+  min-width: 150px;
 }
 .footer__text h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 .footer__text p {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.244);
   line-height: 1.6;
+  width: 150px;
 }
 .footer__section h3 {
   font-size: 1.2em;
@@ -164,7 +164,6 @@ nav ul li {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #2c3e50;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -173,7 +172,7 @@ nav ul li {
   margin-bottom: 8px;
 }
 .footer__section ul a {
-  color: #bdc3c7;
+  color: rgba(0, 0, 0, 0.244);
   text-decoration: none;
 }
 .footer .social-icons {
@@ -184,16 +183,34 @@ nav ul li {
   display: block;
   padding: 10px 20px;
   background-color: #3498db;
-  color: #f4f4f4;
+  color: rgb(6, 193, 180);
   border-radius: 5px;
   text-decoration: none;
 }
 
 .terms {
+  color: rgba(0, 0, 0, 0.244);
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   text-align: end;
+}
+
+.text-area {
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: rgb(6, 193, 180);
+  margin-bottom: 10px;
+}
+.text-area .content {
+  font-weight: bold;
+  margin-left: 25px;
+}
+.text-area .page-no {
+  margin-right: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */
