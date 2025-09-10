@@ -1,0 +1,140 @@
+//
+body {
+  margin: 0;
+  padding: 0;
+}
+
+$display-type: flex;
+$large-size: large;
+
+@mixin border-styel() {
+  border-style: none;
+  border-radius: 10px;
+}
+
+@mixin set-grid-area($class-name, $bg-color) {
+  grid-area: $class-name;
+  background-color: $bg-color;
+}
+
+nav {
+  background-color: bisque;
+  display: $display-type;
+  justify-content: space-between;
+  .logo {
+    font-size: $large-size;
+    height: 30px;
+    width: 50px;
+    color: green;
+    margin-left: 10px;
+  }
+  ul {
+    display: $display-type;
+    list-style-type: none;
+    justify-content: space-around;
+    li {
+      font-size: $large-size;
+      flex-direction: row;
+      margin-right: 15px;
+    }
+  }
+}
+.search-div {
+  margin-top: 2px;
+  width: 100%;
+  height: 200px;
+  background-color: coral;
+  display: $display-type;
+  justify-content: center;
+  align-items: center;
+  input {
+    width: 25%;
+    height: 50px;
+    @include border-styel();
+  }
+  button {
+    @include border-styel();
+    background-color: greenyellow;
+    margin-left: 2px;
+    width: 70px;
+    height: 50px;
+  }
+}
+.item1 {
+  @include set-grid-area(header, gray);
+}
+.item2 {
+  @include set-grid-area(menu, bisque);
+}
+.item3 {
+  @include set-grid-area(left, green);
+}
+.item4 {
+  @include set-grid-area(center, red);
+}
+.item4 {
+  @include set-grid-area(right, gray);
+}
+.item6 {
+  @include set-grid-area(middle, blue);
+}
+.item7 {
+  @include set-grid-area(lower, orange);
+}
+.item8 {
+  @include set-grid-area(footer, gray);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu left left center right right"
+    "menu middle middle middle middle middle"
+    "menu lower lower lower lower lower"
+    "footer footer footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+}
+@mixin set-bg-color($color) {
+  background-color: $color;
+}
+.buttom {
+  display: flex;
+  justify-content: space-between;
+  .previous-btn {
+    @include set-bg-color(greenyellow);
+    border-style: none;
+    margin-left: 5px;
+    border-radius: 5px;
+  }
+  .next-btn {
+    @include set-bg-color(greenyellow);
+    border-style: none;
+    width: 50px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+  .num-btn {
+    @include set-bg-color(greenyellow);
+  }
+}
+
+.lower-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+  h3 {
+    margin-left: 80px;
+  }
+  .text {
+    margin-left: 80px;
+  }
+}
